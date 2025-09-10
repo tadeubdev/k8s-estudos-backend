@@ -1,11 +1,11 @@
 import { Controller, Get } from '@nestjs/common';
 
-@Controller()
+@Controller('api')
 export class AppController {
   constructor() {}
 
   @Get()
-  getHello(): string {
-    return 'Hello World!';
+  getHello(): { message: string } {
+    return { message: 'Olá Mundo!' };
   }
 }
